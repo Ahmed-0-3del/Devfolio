@@ -1,0 +1,449 @@
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-main-color);
+}
+
+:root {
+  --section-bg-color: #f5f5f5;
+  --text-main-color: #4e4e4e;
+  --site-main-color: #4078ff;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.fs-7 {
+  font-size: 0.8rem;
+}
+
+a.floating-icon {
+  bottom: 1rem;
+  right: 1rem;
+  transition: all 0.8s;
+}
+
+a.floating-icon:hover {
+  background-color: #4c93ff !important;
+}
+
+.nav-icon {
+  display: none;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.drop-down-layer li a {
+  transition: all 0.5s;
+}
+
+.drop-down-layer li a:hover {
+  color: var(--site-main-color) !important;
+}
+
+.nav-drop-down-list:hover .drop-down-layer {
+  opacity: 1;
+}
+
+.drop-down-layer {
+  left: 1rem;
+  right: -1rem;
+  top: 150%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.nav-deep-drop-down-list:hover .deep-drop-down-layer {
+  opacity: 1;
+}
+
+.deep-drop-down-layer {
+  left: -10.3rem;
+  top: 1rem;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-icon {
+    display: block;
+  }
+
+  .nav-icon:hover + .navbar-icons-list {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .navbar-icons-list {
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff;
+    position: absolute;
+    top: 5rem;
+    right: 10%;
+    left: 10%;
+    bottom: -30rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  .navbar-icons-list li a {
+    color: #000 !important;
+    transition: all 0.5s;
+  }
+
+  .navbar-icons-list li a:hover {
+    color: var(--site-main-color) !important;
+  }
+
+  .drop-down-layer {
+    left: 100%;
+    right: -100%;
+    top: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+}
+
+#home {
+  background-image: url("../Images/hero-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.animated::before {
+  content: "Designer";
+  color: inherit;
+  font-size: inherit;
+  animation: words 10s infinite;
+}
+@keyframes words {
+  0% {
+    content: "D";
+  }
+  2.75% {
+    content: "De";
+  }
+  5.5% {
+    content: "Des";
+  }
+  8.25% {
+    content: "Desi";
+  }
+  11% {
+    content: "Desig";
+  }
+  13.75% {
+    content: "Design";
+  }
+  16.5% {
+    content: "Designe";
+  }
+  19.25% {
+    content: "Designer";
+  }
+  22% {
+    content: "De";
+  }
+  24.75% {
+    content: "Dev";
+  }
+  27.5% {
+    content: "Deve";
+  }
+  30.25% {
+    content: "Devel";
+  }
+  33% {
+    content: "Develo";
+  }
+  35.75% {
+    content: "Develop";
+  }
+  38.5% {
+    content: "Develope";
+  }
+  41.25% {
+    content: "Developer";
+  }
+  44% {
+    content: "F";
+  }
+  46.75% {
+    content: "Fr";
+  }
+  49.5% {
+    content: "Fre";
+  }
+  52.25% {
+    content: "Free";
+  }
+  55% {
+    content: "Freel";
+  }
+  57.75% {
+    content: "Freela";
+  }
+  60.5% {
+    content: "Freelanc";
+  }
+  63.25% {
+    content: "Freelance";
+  }
+  66% {
+    content: "Freelancer";
+  }
+  68.75% {
+    content: "P";
+  }
+  71.5% {
+    content: "Ph";
+  }
+  74.25% {
+    content: "Pho";
+  }
+  77% {
+    content: "Phot";
+  }
+  79.75% {
+    content: "Photo";
+  }
+  82.5% {
+    content: "Photog";
+  }
+  85.25% {
+    content: "Photogr";
+  }
+  88% {
+    content: "Photogra";
+  }
+  90.75% {
+    content: "Photograp";
+  }
+  93.5% {
+    content: "Photograph";
+  }
+  96.25% {
+    content: "Photographe";
+  }
+  100% {
+    content: "Photographer";
+  }
+}
+
+.animated::after {
+  content: "";
+  width: 0.2rem;
+  background-color: #fff;
+  position: absolute;
+  right: -12px;
+  bottom: 0;
+  top: 5px;
+  animation: cursor 0.5s infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#about {
+  background-color: var(--section-bg-color);
+}
+
+#about main ul {
+  list-style-type: none;
+}
+
+#about main h4::before {
+  content: "";
+  width: 6.5rem;
+  height: 3px;
+  position: absolute;
+  background-color: var(--site-main-color);
+  bottom: -10px;
+}
+
+#services {
+  background-color: var(--section-bg-color);
+}
+
+.services-heading::before {
+  content: "";
+  width: 2.5rem;
+  height: 5px;
+  position: absolute;
+  background-color: var(--site-main-color);
+  bottom: -20px;
+  right: 50%;
+  transform: translatex(50%);
+}
+
+.service-icon {
+  transition: all 0.5s;
+}
+
+.service-icon:hover {
+  color: #fff !important;
+  background-color: var(--site-main-color);
+  border-color: #cde1f8 !important;
+}
+
+#Imp-Num {
+  background-image: url("../Images/counters-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+
+#portfolio {
+  background-color: var(--section-bg-color);
+}
+
+.portfolio-heading::before {
+  content: "";
+  width: 2.5rem;
+  height: 5px;
+  position: absolute;
+  background-color: var(--site-main-color);
+  bottom: -20px;
+  right: 50%;
+  transform: translatex(50%);
+}
+
+#portfolio main .portfolio-card img {
+  transition: all 0.8s;
+}
+
+#portfolio main .portfolio-card img:hover {
+  transform: scale(1.3);
+}
+
+
+#testimonial {
+  background-image: url("../Images/overlay-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#testimonial main img {
+  width: 10rem;
+  height: 10rem;
+}
+
+#blog {
+  background-color: var(--section-bg-color);
+}
+
+.blog-heading::before {
+  content: "";
+  width: 2.5rem;
+  height: 5px;
+  position: absolute;
+  background-color: var(--site-main-color);
+  bottom: -20px;
+  right: 50%;
+  transform: translatex(50%);
+}
+
+#blog main .bolg-card-footer {
+  background-color: var(--section-bg-color);
+}
+
+#blog main .blog-card-footer img {
+  height: 2rem;
+  width: 2rem;
+}
+
+#blog main figcaption a p {
+  transition: all 0.8s;
+}
+
+#blog main figcaption a p:hover {
+  color: var(--site-main-color);
+}
+
+#blog main .blog-card-footer a span {
+  transition: all 0.8s;
+}
+
+#blog main .blog-card-footer a span:hover {
+  color: var(--site-main-color);
+}
+
+#contact {
+  background-image: url("../Images/overlay-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+#contact main h4::before {
+  content: "";
+  width: 6.5rem;
+  height: 3px;
+  position: absolute;
+  background-color: var(--site-main-color);
+  bottom: -10px;
+}
+
+#contact main ul {
+  list-style-type: none;
+}
+
+#contact main .contact-icons a {
+  transition: all 0.8s;
+}
+
+#contact main .contact-icons a:hover {
+  background-color: var(--site-main-color);
+  border-color: #cde1f8 !important;
+}
+
+#contact main .contact-icons a .contact-icon {
+  transition: all 0.5s;
+}
+
+#contact main .contact-icons a:hover .contact-icon {
+  color: #fff !important;
+}
+
+#contact main form button {
+  transition: all 0.8s;
+}
+
+#contact main form button:hover {
+  background-color: #4c93ff !important;
+  border-color: #cde1f8 !important;
+}
+
+
+#footer {
+  background-color: #0062d3;
+}
